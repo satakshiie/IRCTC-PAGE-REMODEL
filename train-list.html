@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Train List</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+</head>
+<div class="header">
+    <!-- Left Logo -->
+    <img src="img/image-4.png" alt="Indian Railways" class="logo-left">
+
+    <!-- Center Links -->
+    <div class="header-links">
+      <div class="top-links">
+        <a href="login.html">login</a>
+        <a href="register.html">Register</a>
+        <div class="dropdown">
+            <a href="#">Trains ▾</a>
+            <div class="dropdown-content">
+              <a href="track.html">Track Train</a>
+              <a href="train-list.html">Train List</a>
+            </div>
+        </div>
+            
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="bottom-links">
+        <a href="#">Help/Support</a>
+        <a href="#">Alerts</a>
+        <a href="#">IRCTC eWallet</a>
+        <span class="date" id="date-time">dd/mm/yy 12:30</span>
+      </div>
+    </div>
+
+    <!-- Right Logo -->
+    <img src="img/image-3.png" alt="IRCTC Logo" class="logo-right">
+
+  </div>
+  
+<body class="train-list-page">
+
+  <h1>Available Trains</h1>
+
+  <div class="filter-section">
+    <select id="sourceFilter">
+      <option value="">Source</option>
+      <option value="New Delhi">New Delhi</option>
+      <option value="Mumbai Central">Mumbai Central</option>
+      <option value="Bangalore">Bangalore</option>
+    </select>
+
+    <select id="destinationFilter">
+      <option value="">Destination</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="New Delhi">New Delhi</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+
+    <select id="departureFilter">
+      <option value="">Departure</option>
+      <option value="16:30">16:30</option>
+      <option value="17:00">17:00</option>
+      <option value="19:20">19:20</option>
+    </select>
+
+    <select id="arrivalFilter">
+      <option value="">Arrival</option>
+      <option value="08:45">08:45</option>
+      <option value="08:35">08:35</option>
+      <option value="10:30">10:30</option>
+    </select>
+
+    <button onclick="filterTrains()">Filter</button>
+    <button onclick="resetFilter()">Reset</button>
+  </div>
+
+  <table class="train-table" id="trainTable">
+    <thead>
+      <tr>
+        <th>Train No.</th>
+        <th>Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>12345</td>
+        <td>Rajdhani Express</td>
+        <td>New Delhi</td>
+        <td>Mumbai</td>
+        <td>16:30</td>
+        <td>08:45</td>
+      </tr>
+      <tr>
+        <td>23456</td>
+        <td>Duronto Express</td>
+        <td>Mumbai Central</td>
+        <td>New Delhi</td>
+        <td>17:00</td>
+        <td>08:35</td>
+      </tr>
+      <tr>
+        <td>34567</td>
+        <td>Shatabdi Express</td>
+        <td>Bangalore</td>
+        <td>Chennai</td>
+        <td>19:20</td>
+        <td>10:30</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function filterTrains() {
+      const source = document.getElementById("sourceFilter").value.toLowerCase();
+      const destination = document.getElementById("destinationFilter").value.toLowerCase();
+      const departure = document.getElementById("departureFilter").value.trim();
+      const arrival = document.getElementById("arrivalFilter").value.trim();
+
+      const rows = document.querySelectorAll("#trainTable tbody tr");
+
+      rows.forEach(row => {
+        const cells = row.querySelectorAll("td");
+        const src = cells[2].textContent.toLowerCase();
+        const dest = cells[3].textContent.toLowerCase();
+        const dep = cells[4].textContent.trim();
+        const arr = cells[5].textContent.trim();
+
+        const match =
+          (source === "" || src === source) &&
+          (destination === "" || dest === destination) &&
+          (departure === "" || dep === departure) &&
+          (arrival === "" || arr === arrival);
+
+        row.style.display = match ? "" : "none";
+      });
+    }
+
+    function resetFilter() {
+      document.getElementById("sourceFilter").value = "";
+      document.getElementById("destinationFilter").value = "";
+      document.getElementById("departureFilter").value = "";
+      document.getElementById("arrivalFilter").value = "";
+
+      const rows = document.querySelectorAll("#trainTable tbody tr");
+      rows.forEach(row => {
+        row.style.display = "";
+      });
+    }
+  </script>
+
+</body>
+</html>
