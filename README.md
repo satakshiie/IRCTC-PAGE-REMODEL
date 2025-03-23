@@ -1,4 +1,4 @@
-# 🚆 IRCTC Retro Clone
+# 🚆 IRCTC Page Clone
 
 A sleek, retro-themed front-end remake of the IRCTC website built for "Frontend Frontier "competition by IIT PATNA. This static website captures the essence of old-school web aesthetics while providing a smooth and responsive user experience for train ticket booking and related actions.
 
