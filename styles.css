@@ -73,7 +73,7 @@ body {
         justify-content: center;
         padding: 40px 20px;
         position: relative;
-        padding-bottom: 300px; /* Equal or more than wheel's height */
+        padding-bottom: 300px; 
   }
   
   
@@ -159,7 +159,7 @@ body {
   }
   .rotating-wheel {
     position: absolute;
-    bottom: -315px; /* ✨ aligns with form */
+    bottom: -315px; 
     left: 50%;
     transform: translateX(-50%);
     width: 800px;
@@ -176,7 +176,7 @@ body {
   }
   @keyframes rotateWheel {
     from {
-      transform: translateX(-50%) rotate(0deg); /* Only X */
+      transform: translateX(-50%) rotate(0deg); 
     }
     to {
       transform: translateX(-50%) rotate(360deg);
@@ -209,7 +209,7 @@ body {
   }
 
   .services-section {
-    margin-top: 300px; /* adjust value as needed */
+    margin-top: 300px;
   }
   .services-title {
     font-size: 38px;
@@ -233,14 +233,6 @@ body {
   }
   
   
-  /*.from-left {
-    animation-name: slideInLeft;
-  }
-  
-  .from-right {
-    animation-name: slideInRight;
-  }
-  */
   @keyframes slideInLeft {
     from {
       transform: translateX(-100%);
@@ -375,7 +367,7 @@ body {
 }
 
 .login-page .ticket input {
-  width: 60%; /* Adjust width as per your preference */
+  width: 60%; 
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
@@ -387,7 +379,7 @@ body {
 }
 
 .login-page .ticket button {
-  width: 50%; /* Adjust width as per your preference */
+  width: 50%; 
   padding: 10px;
   background-color: #a06845;
   color: rgb(21, 21, 21);
@@ -647,13 +639,13 @@ button {
 .track-form button:hover {
   background-color: #ffb74d;
 }
-/* Dropdown wrapper */
+
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown content (hidden by default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -665,7 +657,7 @@ button {
   font-family: 'Kumar One', serif;
 }
 
-/* Dropdown links */
+
 .dropdown-content a {
   color: black;
   padding: 10px 14px;
@@ -673,18 +665,18 @@ button {
   display: block;
 }
 
-/* Hover styles */
+
 .dropdown-content a:hover {
   background-color: #f2f2f2;
 }
 
-/* Show on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Optional subtle animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -10,10 +10,10 @@
 </head>
 <body>
   <div class="header">
-    <!-- Left Logo -->
+   
     <img src="img/image-4.png" alt="Indian Railways" class="logo-left">
 
-    <!-- Center Links -->
+    
     <div class="header-links">
       <div class="top-links">
         <a href="login.html">login</a>
@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <!-- Right Logo -->
+   
     <img src="img/image-3.png" alt="IRCTC Logo" class="logo-right">
 
   </div>
@@ -152,7 +152,7 @@
               </div>
             </div>
           </footer>
-    <!-- IRCTC-style footer section -->
+   
 <div class="irctc-footer">
     <div class="footer-column">
       <a href="#">IRCTC Trains</a>
@@ -190,20 +190,19 @@
       <a href="#">About us</a>
     </div>
   </div>
-  <!-- AOS -->
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-<!-- Swiper JS (MUST COME BEFORE YOUR Swiper INIT) -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- Your custom script -->
+
 <script>
   AOS.init({
     duration: 800,
     once: true
   });
 
-  // Auto update date-time
+
   const dateTime = document.getElementById("date-time");
   const now = new Date();
   const day = String(now.getDate()).padStart(2, '0');
@@ -213,7 +212,7 @@
   const minutes = String(now.getMinutes()).padStart(2, '0');
   dateTime.textContent = `${day}/${month}/${year} ${hours}:${minutes}`;
 
-  // Swiper init
+
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
