@@ -6,7 +6,7 @@ A sleek, retro-themed front-end remake of the IRCTC website built for "Frontend 
 
 ## Preview🖼️ 
 
-> 🔗 [Live Demo](https://your-deployed-link.netlify.app)  
+> 🔗 [Live Demo]((https://irctc-page-remodel.vercel.app) )]
 > 📦 [GitHub Repo](https://github.com/satakshiie/IRCTC-PAGE-REMODEL)
 
 ---
